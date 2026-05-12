@@ -25,7 +25,7 @@ export default function HomePage() {
     {
       title: "FastReport",
       href: "/fastreport",
-      image: "/images/54e49287e4b062d0771142f2/18e3e823-2ae6-462d-94ba-f51808906ed4/SGS+FR35M+Bulkcarrier+20250714+with+Logos+(CROPPPED).png",
+      image: "/images/54e49287e4b062d0771142f2/18e3e823-2ae6-462d-94ba-f51808906ed4/SGS+FR35M+Bulkcarrier+20250714+with+Logos+(CROPPPED).webp",
       description:
         "Industry expertise and data-driven consultancy that de-risks your FastRig investment before committing capital.",
       features: ["Cost-Benefit Analysis", "Expert Technical Guidance", "Implementation Roadmap"],
@@ -33,7 +33,7 @@ export default function HomePage() {
     {
       title: "FastRoute",
       href: "/fastroute",
-      image: "/images/54e49287e4b062d0771142f2/861d3a03-6da3-46e0-adba-351c14fb1af2/SGS_Banner_Clean_PNG-min+(1).png",
+      image: "/images/54e49287e4b062d0771142f2/861d3a03-6da3-46e0-adba-351c14fb1af2/SGS_Banner_Clean_PNG-min+(1).webp",
       description:
         "Route optimisation to measure and maximise fuel savings from FastRig whilst meeting arrival times.",
       features: ["Predict Savings", "Quantify Value", "Maximise Performance"],
