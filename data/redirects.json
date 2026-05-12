@@ -1,0 +1,237 @@
+[
+  {
+    "source": "/blog2/:path*",
+    "destination": "/blog/:path*",
+    "permanent": true
+  },
+  {
+    "source": "/press-1",
+    "destination": "/press",
+    "permanent": true
+  },
+  {
+    "source": "/press-media",
+    "destination": "/press",
+    "permanent": true
+  },
+  {
+    "source": "/contact-us",
+    "destination": "/contact",
+    "permanent": true
+  },
+  {
+    "source": "/about-us",
+    "destination": "/our-story",
+    "permanent": true
+  },
+  {
+    "source": "/homeaboutus",
+    "destination": "/our-story",
+    "permanent": true
+  },
+  {
+    "source": "/people",
+    "destination": "/team",
+    "permanent": true
+  },
+  {
+    "source": "/team-1",
+    "destination": "/team",
+    "permanent": true
+  },
+  {
+    "source": "/team2",
+    "destination": "/team",
+    "permanent": true
+  },
+  {
+    "source": "/team-2",
+    "destination": "/team",
+    "permanent": true
+  },
+  {
+    "source": "/fast-technologies",
+    "destination": "/fastrig",
+    "permanent": true
+  },
+  {
+    "source": "/products-1",
+    "destination": "/fastrig",
+    "permanent": true
+  },
+  {
+    "source": "/ourproducts",
+    "destination": "/fastrig",
+    "permanent": true
+  },
+  {
+    "source": "/ourproducts-old",
+    "destination": "/fastrig",
+    "permanent": true
+  },
+  {
+    "source": "/fastroute-software",
+    "destination": "/fastroute",
+    "permanent": true
+  },
+  {
+    "source": "/casestudy",
+    "destination": "/case-studies",
+    "permanent": true
+  },
+  {
+    "source": "/home-1",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/home-2",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/home-3",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/home-3-1",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/home-3-1-1",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/woc-project-1",
+    "destination": "/woc-project",
+    "permanent": true
+  },
+  {
+    "source": "/woc-project-2",
+    "destination": "/woc-project",
+    "permanent": true
+  },
+  {
+    "source": "/read-me",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/privacy",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/careers",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/investor-information",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/investor-information-old",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/investor-info-v0",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/july21update",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/polar-visualiser",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/fastreport-files",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/sgs-brochure",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/new-page",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/new-gallery",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/newsletter-subscription",
+    "destination": "/news",
+    "permanent": true
+  },
+  {
+    "source": "/shipping-scotlands-expertise-to-the-world",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/landing-bedford",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/sodermalm-house-hayden",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/vision",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/resurge",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/tradewind",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/tradewind-3",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/maritimerenewables",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/impact",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/impact-1",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/news-1/:path*",
+    "destination": "/news/:path*",
+    "permanent": true
+  }
+]
