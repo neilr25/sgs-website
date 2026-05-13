@@ -146,7 +146,7 @@ export default function OurStoryPage() {
               />
               <h3 className="text-lg font-bold text-[var(--sgs-navy)] mb-2 uppercase tracking-wide">Vision</h3>
               <p className="text-[var(--sgs-gray)] leading-relaxed">
-                Zero carbon, data-driven, commercially superior global shipping — in harmony with nature
+                Zero carbon, data-driven, commercially superior global shipping - in harmony with nature
               </p>
             </div>
             {/* Mission */}
@@ -160,8 +160,7 @@ export default function OurStoryPage() {
               />
               <h3 className="text-lg font-bold text-[var(--sgs-navy)] mb-2 uppercase tracking-wide">Mission</h3>
               <p className="text-[var(--sgs-gray)] leading-relaxed">
-                A new, faster, cleaner, cheaper and safer system combining wind power engineering,
-                technology and finance
+                A new faster, cleaner, cheaper and safer system combining wind power engineering, technology and finance
               </p>
             </div>
             {/* Purpose */}
@@ -205,32 +204,18 @@ export default function OurStoryPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="py-14 bg-[var(--sgs-navy)] text-white">
-        <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Subscribe To Our Newsletter</h2>
-          <p className="text-white/80 mb-6 max-w-lg mx-auto">
-            Do you want to receive the latest news and updates straight into your inbox? Subscribe to our
-            newsletter!
-          </p>
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 text-[var(--sgs-navy)] text-sm rounded focus:outline-none focus:ring-2 focus:ring-[var(--sgs-teal)]"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-[var(--sgs-teal)] text-white px-6 py-3 text-sm font-semibold tracking-wide uppercase rounded hover:bg-[var(--sgs-teal-dark)] transition-colors"
+          {/* Watch SGS history video */}
+          <div className="mt-14 text-center">
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 border-2 border-[var(--sgs-navy)] text-[var(--sgs-navy)] px-6 py-3 font-semibold tracking-wide text-sm rounded hover:bg-[var(--sgs-navy)] hover:text-white transition-colors"
             >
-              Sign Up
-            </button>
-          </form>
-          <p className="text-white/50 text-xs mt-4">We respect your privacy. Unsubscribe at any time.</p>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Watch SGS history video
+            </Link>
+          </div>
         </div>
       </section>
     </div>

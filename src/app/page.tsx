@@ -66,7 +66,7 @@ export default function HomePage() {
       <section className="relative bg-[var(--sgs-navy)] text-white overflow-hidden min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/54e49287e4b062d0771142f2/bd2a3d71-8572-4811-805d-c13a4e6102b6/SGS+FastRig+-+Torquay.jpg"
+            src="/images/54e49287e4b062d0771142f2/cb258d16-417e-419f-8946-8ef58bf83b63/hero-rigs.webp"
             alt="Smart Green Shipping FastRig technology at sea"
             fill
             className="object-cover object-center"
