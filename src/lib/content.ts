@@ -59,16 +59,20 @@ export function getTeamMembers(): ContentPage[] {
   return getContent().pages.filter(p => p.pageType === 'team-member');
 }
 
+function sortByPubDateDesc(posts: ContentPost[]): ContentPost[] {
+  return [...posts].sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+}
+
 export function getBlogPosts(): ContentPost[] {
-  return getContent().postsByCollection.blog;
+  return sortByPubDateDesc(getContent().postsByCollection.blog);
 }
 
 export function getPressPosts(): ContentPost[] {
-  return getContent().postsByCollection.pressandmedia;
+  return sortByPubDateDesc(getContent().postsByCollection.pressandmedia);
 }
 
 export function getNewsPosts(): ContentPost[] {
-  return getContent().postsByCollection.news;
+  return sortByPubDateDesc(getContent().postsByCollection.news);
 }
 
 export function slugify(text: string): string {

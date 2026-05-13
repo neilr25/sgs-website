@@ -5,8 +5,7 @@ import { getPressPosts, getBlogPosts, getNewsPosts } from "@/lib/content";
 export default function HomePage() {
   const pressPosts = getPressPosts().slice(0, 6);
   const blogPosts = getBlogPosts()
-    .slice(-3)
-    .reverse()
+    .slice(0, 3)
     .map((p) => ({ ...p, link: p.link.replace(/^\/blog2\//, "/blog/") }));
   const newsletterPosts = getNewsPosts().slice(0, 3).map((p) => ({
     ...p,
