@@ -4,20 +4,86 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
+interface DropdownItem {
+  href: string;
+  label: string;
+}
+
+interface NavGroup {
+  type: "link" | "dropdown";
+  label: string;
+  href?: string;
+  items?: DropdownItem[];
+}
+
+const navGroups: NavGroup[] = [
+  { type: "link", label: "Home", href: "/" },
+  {
+    type: "dropdown",
+    label: "About",
+    items: [
+      { href: "/our-story", label: "Our Story" },
+      { href: "/team", label: "Team" },
+    ],
+  },
+  {
+    type: "dropdown",
+    label: "Products",
+    items: [
+      { href: "/fastrig", label: "FastRig" },
+      { href: "/fastreport", label: "FastReport" },
+      { href: "/fastroute", label: "FastRoute" },
+      { href: "/fastreach", label: "FastReach" },
+    ],
+  },
+  { type: "link", label: "WoC Project", href: "/woc-project" },
+  {
+    type: "dropdown",
+    label: "Media",
+    items: [
+      { href: "/press", label: "Press" },
+      { href: "/news", label: "Newsletters" },
+      { href: "/blog", label: "Blog" },
+    ],
+  },
+];
+
+function DropdownNav({ group }: { group: NavGroup }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button className="px-3 py-2 text-[13px] font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)] transition-colors flex items-center gap-1">
+        {group.label}
+        <svg className="w-3 h-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && (
+        <div className="absolute top-full left-0 pt-2">
+          <div className="bg-white shadow-lg border border-gray-100 rounded-sm min-w-[160px] py-2">
+            {group.items!.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-4 py-2 text-[13px] font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)] hover:bg-gray-50 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navItems = [
-    { href: "/our-story", label: "Our Story" },
-    { href: "/fastrig", label: "FastRig" },
-    { href: "/fastreport", label: "FastReport" },
-    { href: "/fastroute", label: "FastRoute" },
-    { href: "/fastreach", label: "FastReach" },
-    { href: "/team", label: "Team" },
-    { href: "/press", label: "Press & Media" },
-    { href: "/blog", label: "Blog" },
-    { href: "/news", label: "Newsletters" },
-  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
@@ -37,15 +103,19 @@ export function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="px-3 py-2 text-[13px] font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)] transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navGroups.map((group) =>
+              group.type === "link" ? (
+                <Link
+                  key={group.href}
+                  href={group.href!}
+                  className="px-3 py-2 text-[13px] font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)] transition-colors"
+                >
+                  {group.label}
+                </Link>
+              ) : (
+                <DropdownNav key={group.label} group={group} />
+              )
+            )}
           </nav>
 
           {/* Social icons + Contact CTA - desktop */}
@@ -116,16 +186,36 @@ export function Header() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="px-6 py-4 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block py-2.5 text-sm font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)] border-b border-gray-50"
-                onClick={() => setMobileOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navGroups.map((group) =>
+              group.type === "link" ? (
+                <Link
+                  key={group.href}
+                  href={group.href!}
+                  className="block py-2.5 text-sm font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)] border-b border-gray-50"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {group.label}
+                </Link>
+              ) : (
+                <div key={group.label}>
+                  <div className="py-2.5 text-sm font-semibold tracking-wide uppercase text-[var(--sgs-navy)] border-b border-gray-50">
+                    {group.label}
+                  </div>
+                  <div className="pl-4 space-y-1">
+                    {group.items!.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block py-2 text-sm font-semibold tracking-wide uppercase text-[var(--sgs-navy)] hover:text-[var(--sgs-teal)]"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
             <Link
               href="/contactus"
               className="block mt-4 bg-[var(--sgs-teal)] text-white px-5 py-3 text-sm font-semibold tracking-wide uppercase text-center hover:bg-[var(--sgs-teal-dark)] transition-colors"
