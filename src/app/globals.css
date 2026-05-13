@@ -402,6 +402,39 @@ body {
   flex-wrap: wrap;
 }
 
+/* Section height classes */
+.page-section.section-height--small {
+  min-height: 40vh;
+}
+.page-section.section-height--medium {
+  min-height: 55vh;
+}
+.page-section.section-height--large {
+  min-height: 70vh;
+}
+
+/* Horizontal alignment */
+.page-section.horizontal-alignment--center {
+  text-align: center;
+}
+.page-section.horizontal-alignment--left {
+  text-align: left;
+}
+
+/* Vertical alignment */
+.page-section.vertical-alignment--middle {
+  display: flex;
+  align-items: center;
+}
+
+/* Content width override */
+.page-section.content-width--medium .content-wrapper {
+  max-width: 900px;
+}
+.page-section.content-width--narrow .content-wrapper {
+  max-width: 700px;
+}
+
 /* Newsletter form styling in content */
 .prose-content form input[type="email"] {
   padding: 0.75rem 1rem;
@@ -428,4 +461,96 @@ body {
 .prose-content form button:hover,
 .prose-content form input[type="submit"]:hover {
   background-color: var(--sgs-teal-dark);
+}
+
+/* =============================
+   Team & Grid Items
+   ============================= */
+
+/* Squarespace summary/block grid items */
+.sqs-gallery-design-grid-slide {
+  margin: 0.5rem;
+}
+
+/* Image cards with overlay text */
+.sqs-image-content,
+.image-card-wrapper {
+  position: relative;
+}
+.sqs-image-content img,
+.image-card-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Team member portrait styling */
+.sqs-block-image .image-block-wrapper img {
+  border-radius: 0.25rem;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Squarespace button shapes */
+.sqs-button-element--primary,
+.sqs-button-element--secondary,
+.sqs-block-button-element {
+  display: inline-block;
+  padding: 0.625rem 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Squarespace summary items (team cards, blog cards) */
+.summary-item {
+  margin-bottom: 1.5rem;
+}
+.summary-thumbnail {
+  margin-bottom: 0.75rem;
+}
+.summary-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+/* Fluid engine responsive columns */
+.fe-block {
+  position: relative;
+}
+
+/* Squarespace video blocks */
+.sqs-block-video .intrinsic-inner {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.sqs-block-video .intrinsic-inner iframe,
+.sqs-block-video .intrinsic-inner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Section divider shapes */
+.section-divider {
+  display: none;
+}
+
+/* Squarespace social icon blocks */
+.sqs-block-socialbuttons .sqs-svg-icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+}
+.sqs-block-socialbuttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

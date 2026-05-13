@@ -82,7 +82,7 @@ export default function HomePage() {
             </h1>
             <Link
               href="/our-story"
-              className="inline-block bg-[var(--sgs-navy)] text-white px-8 py-3.5 font-semibold tracking-wide text-sm rounded hover:bg-[var(--sgs-navy-light)] transition-colors"
+              className="inline-block bg-[var(--sgs-navy)] hover:bg-[#0d2d52] text-white px-8 py-3.5 font-semibold tracking-wide text-sm transition-colors"
             >
               Find out more →
             </Link>
