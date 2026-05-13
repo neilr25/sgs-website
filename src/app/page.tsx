@@ -62,9 +62,8 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* Hero Section - Full-bleed background image like Squarespace */}
+      {/* Hero Section - Light background with image, heading + single CTA */}
       <section className="relative bg-[var(--sgs-navy)] text-white overflow-hidden min-h-[70vh] flex items-center">
-        {/* Background image */}
         <div className="absolute inset-0">
           <Image
             src="/images/54e49287e4b062d0771142f2/bd2a3d71-8572-4811-805d-c13a4e6102b6/SGS+FastRig+-+Torquay.jpg"
@@ -74,37 +73,51 @@ export default function HomePage() {
             priority
             sizes="100vw"
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-[var(--sgs-navy)]/70" />
+          <div className="absolute inset-0 bg-[var(--sgs-navy)]/60" />
         </div>
         <div className="relative max-w-[var(--max-width)] mx-auto px-6 lg:px-8 py-24 md:py-32 lg:py-40 w-full">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] mb-8 tracking-tight">
               The only wind propulsion Provider able to&nbsp;guarantee&nbsp;performance
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-              Smart Green Shipping develops validated wind propulsion technology and digital optimisation solutions
-              that reduce fuel consumption, emissions and operating costs through performance-guaranteed service models.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/our-story"
-                className="bg-white text-[var(--sgs-navy)] px-7 py-3.5 font-semibold tracking-wide text-sm hover:bg-gray-100 transition-colors"
-              >
-                Find out more
-              </Link>
-              <Link
-                href="/woc-project"
-                className="border-2 border-white text-white px-7 py-3.5 font-semibold tracking-wide text-sm hover:bg-white hover:text-[var(--sgs-navy)] transition-colors"
-              >
-                Winds of Change Project
-              </Link>
-            </div>
+            <Link
+              href="/our-story"
+              className="inline-block bg-[var(--sgs-navy)] text-white px-8 py-3.5 font-semibold tracking-wide text-sm rounded hover:bg-[var(--sgs-navy-light)] transition-colors"
+            >
+              Find out more →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Solutions - 3-column top row + 1 center below, circular images */}
+      {/* Value Proposition - Dark navy section with CTA buttons */}
+      <section className="py-20 md:py-28 bg-[var(--sgs-navy)] text-white">
+        <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8 text-center">
+          <p className="text-lg md:text-xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
+            Smart Green Shipping develops validated wind propulsion technology and digital optimisation solutions
+            that reduce fuel consumption, emissions and operating costs through performance-guaranteed service models.
+          </p>
+          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed font-semibold">
+            We call it next generation Smart Green Shipping
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/woc-project"
+              className="bg-white text-[var(--sgs-navy)] px-8 py-3.5 font-semibold tracking-wide text-sm rounded hover:bg-gray-100 transition-colors"
+            >
+              Winds of Change Project
+            </Link>
+            <Link
+              href="/our-story"
+              className="border-2 border-white text-white px-8 py-3.5 font-semibold tracking-wide text-sm rounded hover:bg-white hover:text-[var(--sgs-navy)] transition-colors"
+            >
+              About Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions - 4-column on white with navy Learn more buttons */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--sgs-navy)] text-center mb-4 tracking-tight">
@@ -113,9 +126,8 @@ export default function HomePage() {
           <p className="text-center text-[var(--sgs-gray)] max-w-2xl mx-auto mb-14">
             A complete suite of wind-powered solutions backed by data, expertise, and performance guarantees.
           </p>
-          {/* 3-column top row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {solutions.slice(0, 3).map((sol) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {solutions.map((sol) => (
               <Link
                 key={sol.title}
                 href={sol.href}
@@ -134,99 +146,57 @@ export default function HomePage() {
                   {sol.title}
                 </h3>
                 <p className="text-sm text-[var(--sgs-gray)] mb-4 leading-relaxed">{sol.description}</p>
-                <ul className="space-y-1.5 text-left max-w-[260px] mx-auto">
+                <ul className="space-y-1.5 text-left max-w-[240px] mx-auto mb-5">
                   {sol.features.map((f) => (
-                    <li key={f} className="text-sm text-[var(--sgs-green)] flex items-center gap-2 font-medium">
-                      <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={f} className="text-sm text-[var(--sgs-navy)] flex items-center gap-2 font-medium">
+                      <svg className="w-4 h-4 shrink-0 text-[var(--sgs-teal)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {f}
                     </li>
                   ))}
                 </ul>
-                <span className="inline-block mt-4 text-sm font-semibold text-[var(--sgs-navy)] group-hover:text-[var(--sgs-teal)] transition-colors">
-                  Learn more →
+                <span className="inline-block bg-[var(--sgs-navy)] text-white px-6 py-2.5 text-sm font-semibold rounded group-hover:bg-[var(--sgs-navy-light)] transition-colors">
+                  Learn more
                 </span>
               </Link>
             ))}
           </div>
-          {/* FastReach centred below */}
-          <div className="flex justify-center">
+          <div className="mt-12 text-center">
             <Link
-              href={solutions[3].href}
-              className="group text-center p-6 max-w-sm hover:shadow-xl transition-all duration-300"
+              href="/fastrig"
+              className="inline-block bg-[var(--sgs-navy)] text-white px-8 py-3 text-sm font-semibold rounded hover:bg-[var(--sgs-navy-light)] transition-colors"
             >
-              <div className="w-32 h-32 mx-auto mb-5 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-[var(--sgs-teal)] transition-colors">
-                <Image
-                  src={solutions[3].image}
-                  alt={solutions[3].title}
-                  width={128}
-                  height={128}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[var(--sgs-navy)] mb-3 group-hover:text-[var(--sgs-teal)] transition-colors">
-                {solutions[3].title}
-              </h3>
-              <p className="text-sm text-[var(--sgs-gray)] mb-4 leading-relaxed">{solutions[3].description}</p>
-              <ul className="space-y-1.5 text-left max-w-[260px] mx-auto">
-                {solutions[3].features.map((f) => (
-                  <li key={f} className="text-sm text-[var(--sgs-green)] flex items-center gap-2 font-medium">
-                    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <span className="inline-block mt-4 text-sm font-semibold text-[var(--sgs-navy)] group-hover:text-[var(--sgs-teal)] transition-colors">
-                Learn more →
-              </span>
+              Download Brochure
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Awards */}
-      <section className="py-20 bg-[var(--sgs-light)]">
+      {/* Latest Updates - Light background, 3-column */}
+      <section className="py-20 bg-white">
         <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--sgs-navy)] text-center mb-12 tracking-tight">
-            Awards & Recognition
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {awards.map((award, i) => (
-              <div key={i} className="bg-white p-5 border border-gray-100">
-                <p className="text-sm font-medium text-[var(--sgs-navy)] leading-relaxed">{award}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Press - DARK NAVY background matching Squarespace */}
-      <section className="py-20 bg-[var(--sgs-navy)] text-white">
-        <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 tracking-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--sgs-navy)] mb-10 tracking-tight">
             Latest Updates
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pressPosts.map((post) => (
               <Link
                 key={post.link}
                 href={post.link}
-                className="group p-0 hover:bg-white/5 transition-all duration-300"
+                className="group block"
               >
-                <p className="text-xs text-gray-400 mb-2 font-medium uppercase tracking-wide">
+                <p className="text-xs text-[var(--sgs-gray-light)] mb-2 font-medium uppercase tracking-wide">
                   {new Date(post.pubDate).toLocaleDateString("en-GB", {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
                   })}
                 </p>
-                <h3 className="text-base font-semibold text-white group-hover:text-[var(--sgs-teal)] transition-colors line-clamp-3 leading-snug mb-3">
+                <h3 className="text-base font-semibold text-[var(--sgs-navy)] group-hover:text-[var(--sgs-teal)] transition-colors line-clamp-3 leading-snug mb-3">
                   {post.title}
                 </h3>
-                <span className="text-sm font-medium text-[var(--sgs-teal)] group-hover:text-white transition-colors">
+                <span className="text-sm font-medium text-[var(--sgs-teal)] group-hover:text-[var(--sgs-navy)] transition-colors">
                   Read more →
                 </span>
               </Link>
@@ -235,7 +205,7 @@ export default function HomePage() {
           <div className="mt-10 text-center">
             <Link
               href="/press"
-              className="text-[var(--sgs-teal)] font-semibold text-sm tracking-wide uppercase hover:text-white transition-colors"
+              className="text-[var(--sgs-teal)] font-semibold text-sm tracking-wide uppercase hover:text-[var(--sgs-navy)] transition-colors"
             >
               View all →
             </Link>
@@ -243,101 +213,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest Blog */}
-      <section className="py-20 bg-[var(--sgs-sky)]">
+      {/* Awards - Dark navy background, 5-column grid */}
+      <section className="py-20 bg-[var(--sgs-navy)] text-white">
         <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--sgs-navy)] mb-10 tracking-tight">
-            From the Blog
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 tracking-tight text-white text-center">
+            Awards & Recognition
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogPosts.map((post) => (
-              <Link
-                key={post.link}
-                href={post.link}
-                className="group bg-white p-6 border border-gray-200 hover:border-[var(--sgs-teal)] hover:shadow-md transition-all duration-300"
-              >
-                <p className="text-xs text-[var(--sgs-gray-light)] mb-2 font-medium uppercase tracking-wide">
-                  {new Date(post.pubDate).toLocaleDateString("en-GB", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </p>
-                <h3 className="text-base font-semibold text-[var(--sgs-navy)] group-hover:text-[var(--sgs-teal)] transition-colors line-clamp-2 leading-snug">
-                  {post.title}
-                </h3>
-              </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {awards.map((award, i) => (
+              <div key={i} className="text-center">
+                <p className="text-sm font-medium text-white/90 leading-relaxed">{award}</p>
+              </div>
             ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              href="/blog"
-              className="text-[var(--sgs-teal)] font-semibold text-sm tracking-wide uppercase hover:text-[var(--sgs-green)] transition-colors"
-            >
-              View all posts →
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Newsletters */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--sgs-navy)] mb-10 tracking-tight">
-            Newsletters
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {newsletterPosts.map((post) => (
-              <Link
-                key={post.link}
-                href={post.link}
-                className="group p-6 bg-white border border-gray-200 hover:border-[var(--sgs-green)] hover:shadow-md transition-all duration-300"
-              >
-                <p className="text-xs text-[var(--sgs-gray-light)] mb-2 font-medium uppercase tracking-wide">
-                  {new Date(post.pubDate).toLocaleDateString("en-GB", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </p>
-                <h3 className="text-base font-semibold text-[var(--sgs-navy)] group-hover:text-[var(--sgs-green)] transition-colors line-clamp-2 leading-snug">
-                  {post.title}
-                </h3>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              href="/news"
-              className="text-[var(--sgs-green)] font-semibold text-sm tracking-wide uppercase hover:text-[var(--sgs-teal)] transition-colors"
-            >
-              View all newsletters →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup - Teal/blue background section above footer */}
-      <section className="py-14 bg-[var(--sgs-teal)] text-white">
+      {/* Newsletter Signup - Navy background with cyan Sign Up button */}
+      <section className="py-14 bg-[var(--sgs-navy)] text-white">
         <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Stay Updated</h2>
-          <p className="text-white/90 mb-6 max-w-lg mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">Subscribe To Our Newsletter</h2>
+          <p className="text-white/80 mb-6 max-w-lg mx-auto">
             Sign up for news and updates about Smart Green Shipping&apos;s wind propulsion solutions.
           </p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 text-[var(--sgs-navy)] text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="flex-1 px-4 py-3 text-[var(--sgs-navy)] text-sm rounded focus:outline-none focus:ring-2 focus:ring-[var(--sgs-teal)]"
               required
             />
             <button
               type="submit"
-              className="bg-[var(--sgs-navy)] text-white px-6 py-3 text-sm font-semibold tracking-wide uppercase hover:bg-[var(--sgs-dark)] transition-colors"
+              className="bg-[var(--sgs-teal)] text-white px-6 py-3 text-sm font-semibold tracking-wide uppercase rounded hover:bg-[var(--sgs-teal-dark)] transition-colors"
             >
               Sign Up
             </button>
           </form>
+          <p className="text-white/50 text-xs mt-4">We respect your privacy. Unsubscribe at any time.</p>
         </div>
       </section>
     </div>

@@ -129,3 +129,303 @@ body {
 .prose-content .sqs-block-spacer {
   height: 2rem;
 }
+
+/* =============================
+   Squarespace Section Themes
+   These match the original site's
+   section-level backgrounds and text colors
+   ============================= */
+
+/* Full-bleed sections */
+.page-section.full-bleed-section,
+.page-section.background-width--full-bleed {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark-bold theme: navy bg, white text */
+.page-section.dark-bold {
+  background-color: var(--sgs-navy);
+  color: #fff;
+}
+.page-section.dark-bold h1,
+.page-section.dark-bold h2,
+.page-section.dark-bold h3,
+.page-section.dark-bold h4 {
+  color: #fff;
+}
+.page-section.dark-bold p,
+.page-section.dark-bold li {
+  color: rgba(255, 255, 255, 0.85);
+}
+.page-section.dark-bold a {
+  color: var(--sgs-teal);
+}
+
+/* Black theme: very dark bg, white text */
+.page-section.black {
+  background-color: #111;
+  color: #fff;
+}
+.page-section.black h1,
+.page-section.black h2,
+.page-section.black h3,
+.page-section.black h4 {
+  color: #fff;
+}
+.page-section.black p,
+.page-section.black li {
+  color: rgba(255, 255, 255, 0.85);
+}
+.page-section.black a {
+  color: var(--sgs-teal);
+}
+
+/* White-bold theme: white bg, dark text */
+.page-section.white-bold {
+  background-color: #fff;
+  color: var(--sgs-navy);
+}
+.page-section.white-bold h1,
+.page-section.white-bold h2,
+.page-section.white-bold h3,
+.page-section.white-bold h4 {
+  color: var(--sgs-navy);
+}
+.page-section.white-bold p,
+.page-section.white-bold li {
+  color: #333;
+}
+
+/* Bright theme: light/white bg with accent */
+.page-section.bright {
+  background-color: var(--sgs-teal);
+  color: #fff;
+}
+.page-section.bright h1,
+.page-section.bright h2 {
+  color: #fff;
+}
+
+/* Section content wrapper */
+.page-section .content-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* Section inner padding for full-bleed sections */
+.page-section > .section-border > .section-background,
+.page-section > .section-content {
+  padding: 4rem 1.5rem;
+}
+
+/* Squarespace content-width */
+.page-section.content-width--wide .content-wrapper,
+.page-section.content-width--wide .fluid-engine > .sqs-row > .sqs-col-12 {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* =============================
+   Squarespace Fluid Engine Grid
+   ============================= */
+.sqs-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+.sqs-col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 0.5rem;
+}
+.sqs-col-8 {
+  flex: 0 0 66.666%;
+  max-width: 66.666%;
+  padding: 0 0.5rem;
+}
+.sqs-col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 0.5rem;
+}
+.sqs-col-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 0 0.5rem;
+}
+.sqs-col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 0.5rem;
+}
+@media (max-width: 768px) {
+  .sqs-col-8,
+  .sqs-col-6,
+  .sqs-col-4,
+  .sqs-col-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* =============================
+   Squarespace Block Styling
+   ============================= */
+
+/* Image blocks */
+.sqs-block-image {
+  margin: 1.5rem 0;
+}
+.sqs-block-image .image-block-wrapper,
+.sqs-block-image .sqs-image {
+  max-width: 100%;
+}
+.sqs-block-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button blocks */
+.sqs-block-button .sqs-block-button-element--medium,
+.sqs-block-button .sqs-block-button-element {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.sqs-block-button .sqs-block-button-element--medium,
+.sqs-block-button .sqs-block-button-element--primary {
+  background-color: var(--sgs-navy);
+  color: #fff;
+  border-radius: 0.25rem;
+}
+.sqs-block-button .sqs-block-button-element--medium:hover,
+.sqs-block-button .sqs-block-button-element--primary:hover {
+  background-color: var(--sgs-navy-light);
+}
+
+/* Dark section buttons should be inverted */
+.dark-bold .sqs-block-button .sqs-block-button-element--medium,
+.dark-bold .sqs-block-button .sqs-block-button-element--primary,
+.black .sqs-block-button .sqs-block-button-element--medium,
+.black .sqs-block-button .sqs-block-button-element--primary {
+  background-color: #fff;
+  color: var(--sgs-navy);
+}
+.dark-bold .sqs-block-button .sqs-block-button-element--medium:hover,
+.black .sqs-block-button .sqs-block-button-element--medium:hover {
+  background-color: var(--sgs-teal);
+  color: #fff;
+}
+
+/* Text blocks */
+.sqs-block-html {
+  margin: 1rem 0;
+}
+.sqs-block-html h1,
+.sqs-block-html h2,
+.sqs-block-html h3,
+.sqs-block-html h4 {
+  margin: 1.5rem 0 0.5rem;
+}
+.sqs-block-html p {
+  margin: 0.75rem 0;
+  line-height: 1.75;
+}
+
+/* Spacer blocks */
+.sqs-block-spacer {
+  height: 2rem;
+}
+
+/* Divider blocks */
+.sqs-block-divider hr,
+.sqs-block-divider .sqs-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+/* Code blocks */
+.sqs-block-code pre {
+  background: var(--sgs-light);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+}
+
+/* Squarespace layout engine section padding */
+.page-section.layout-engine-section {
+  padding: 4rem 0;
+}
+
+/* Section background images */
+.page-section .section-background img,
+.page-section .section-background-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* Section border/background wrapper */
+.page-section .section-border {
+  position: relative;
+}
+.page-section .section-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.page-section .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make fluid engine sections responsive */
+.fluid-engine {
+  width: 100%;
+}
+.fluid-engine > .sqs-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Newsletter form styling in content */
+.prose-content form input[type="email"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 400px;
+}
+.prose-content form button,
+.prose-content form input[type="submit"] {
+  background-color: var(--sgs-teal);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.prose-content form button:hover,
+.prose-content form input[type="submit"]:hover {
+  background-color: var(--sgs-teal-dark);
+}
