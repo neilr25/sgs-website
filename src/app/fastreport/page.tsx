@@ -11,7 +11,7 @@ export default function FastReportPage() {
             {/* Left: Icon + Title */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
               <Image
-                src="/images/54e49287e4b062d0771142f2/ec4488b6-2a29-4336-9179-c4f1dadfce5b/FastReport+Icon+white+1.webp"
+                src="/images/54e49287e4b062d0771142f2/ec4488b6-2a29-4336-9179-c4f1dadfce5b/fastreport-icon.webp"
                 alt="FastReport Icon"
                 width={120}
                 height={120}
@@ -27,7 +27,7 @@ export default function FastReportPage() {
             {/* Right: Hero Image */}
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/54e49287e4b062d0771142f2/18e3e823-2ae6-462d-94ba-f51808906ed4/SGS+FR35M+Bulkcarrier+20250714+with+Logos+%28CROPPPED%29.webp"
+                src="/images/54e49287e4b062d0771142f2/18e3e823-2ae6-462d-94ba-f51808906ed4/fastreport-hero.webp"
                 alt="FastReport shipping analysis"
                 fill
                 className="object-cover"

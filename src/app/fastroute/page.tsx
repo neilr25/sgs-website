@@ -11,7 +11,7 @@ export default function FastRoutePage() {
             {/* Left: Icon + Title */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
               <Image
-                src="/images/54e49287e4b062d0771142f2/74026201-c330-4e9d-8d3a-71fe36fb6ef4/FastRoute+Icon+white.webp"
+                src="/images/54e49287e4b062d0771142f2/74026201-c330-4e9d-8d3a-71fe36fb6ef4/fastroute-icon.webp"
                 alt="FastRoute Icon"
                 width={120}
                 height={120}
@@ -27,7 +27,7 @@ export default function FastRoutePage() {
             {/* Right: Hero Image */}
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/54e49287e4b062d0771142f2/861d3a03-6da3-46e0-adba-351c14fb1af2/SGS_Banner_Clean_PNG-min+%281%29.webp"
+                src="/images/54e49287e4b062d0771142f2/861d3a03-6da3-46e0-adba-351c14fb1af2/fastroute-hero.webp"
                 alt="FastRoute route optimisation"
                 fill
                 className="object-cover"
