@@ -1,5 +1,138 @@
-import { ContentPage } from "@/components/ContentPage";
+export default function ContactUsPage() {
+  return (
+    <div className="bg-white">
+      {/* Page Header */}
+      <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8 pt-12 pb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy tracking-tight leading-tight">
+          Contact Us
+        </h1>
+      </div>
 
-export default function Page() {
-  return <ContentPage title={"Contact Us"} htmlContent={"<article class=\"sections\" id=\"sections\" data-page-sections=\"65e71ca5f8fd870a38b400aa\">\n  \n  \n    \n    \n\n\n  \n  \n\n\n\n\n\n\n\n\n\n\n\n<section\n  data-test=\"page-section\"\n  \n  data-section-theme=\"white-bold\"\n  class='page-section \n    \n      full-bleed-section\n      layout-engine-section\n    \n    background-width--full-bleed\n    \n      section-height--small\n    \n    \n      content-width--wide\n    \n    horizontal-alignment--center\n    vertical-alignment--middle\n    \n      \n    \n    \n    white-bold'\n  \n  data-section-id=\"6808c7c0d8fdbbc7613e2aa3\"\n  \n  data-controller=\"SectionWrapperController\"\n  data-current-styles=\"{\n  &quot;imageOverlayOpacity&quot;: 0.15,\n  &quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,\n  &quot;sectionHeight&quot;: &quot;section-height--small&quot;,\n  &quot;customSectionHeight&quot;: 10,\n  &quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,\n  &quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,\n  &quot;contentWidth&quot;: &quot;content-width--wide&quot;,\n  &quot;customContentWidth&quot;: 50,\n  &quot;sectionTheme&quot;: &quot;white-bold&quot;,\n  &quot;sectionAnimation&quot;: &quot;none&quot;,\n  &quot;backgroundMode&quot;: &quot;image&quot;\n}\"\n  data-current-context=\"{\n  &quot;video&quot;: {\n    &quot;playbackSpeed&quot;: 1,\n    &quot;filter&quot;: 1,\n    &quot;filterStrength&quot;: 0,\n    &quot;zoom&quot;: 0,\n    &quot;videoSourceProvider&quot;: &quot;none&quot;\n  },\n  &quot;backgroundImageId&quot;: null,\n  &quot;backgroundMediaEffect&quot;: {\n    &quot;type&quot;: &quot;none&quot;\n  },\n  &quot;divider&quot;: {\n    &quot;enabled&quot;: false\n  },\n  &quot;typeName&quot;: null\n}\"\n  data-animation=\"none\"\n  data-fluid-engine-section\n   \n  \n    \n  \n  \n  \n  \n  \n\n\n  data-sqsp-section=\"fluid-engine\"\n\n\n>\n  <div\n    class=\"section-border\"\n    \n  >\n    <div class=\"section-background\">\n    \n      \n    \n    </div>\n  </div>\n  <div\n    class='content-wrapper'\n    style='\n      \n        \n      \n    '\n  >\n    <div\n      class=\"content\"\n      \n    >\n      \n      \n      \n      \n      \n      \n      \n      \n      \n      \n      <div data-fluid-engine=\"true\"><style>\n\n.fe-6808c7c0f8a81cb25055ae01 {\n  --grid-gutter: calc(var(--sqs-mobile-site-gutter, 6vw) - 11.0px);\n  --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (8 - 1)) ) / 8 );\n\n  display: grid;\n  position: relative;\n  grid-area: 1/1/-1/-1;\n  grid-template-rows: repeat(39,minmax(24px, auto));\n  grid-template-columns:\n    minmax(var(--grid-gutter), 1fr)\n    repeat(8, minmax(0, var(--cell-max-width)))\n    minmax(var(--grid-gutter), 1fr);\n  row-gap: 11.0px;\n  column-gap: 11.0px;\n  overflow-x: hidden;\n  overflow-x: clip;\n}\n\n@media (min-width: 768px) {\n  .background-width--inset .fe-6808c7c0f8a81cb25055ae01 {\n    --inset-padding: calc(var(--sqs-site-gutter) * 2);\n  }\n\n  .fe-6808c7c0f8a81cb25055ae01 {\n    --grid-gutter: calc(var(--sqs-site-gutter, 4vw) - 11.0px);\n    --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (24 - 1)) ) / 24 );\n    --inset-padding: 0vw;\n\n    --row-height-scaling-factor: 0.0215;\n    --container-width: min(var(--sqs-site-max-width, 1500px), calc(100vw - var(--sqs-site-gutter, 4vw) * 2 - var(--inset-padding) ));\n\n    grid-template-rows: repeat(20,minmax(calc(var(--container-width) * var(--row-height-scaling-factor)), auto));\n    grid-template-columns:\n      minmax(var(--grid-gutter), 1fr)\n      repeat(24, minmax(0, var(--cell-max-width)))\n      minmax(var(--grid-gutter), 1fr);\n  }\n}\n\n\n  .fe-block-6808c7c0c35bcfa247a5dc7f {\n    grid-area: 1/2/3/10;\n    z-index: 0;\n\n    @media (max-width: 767px) {\n      \n        \n      \n      \n    }\n  }\n\n  .fe-block-6808c7c0c35bcfa247a5dc7f .sqs-block {\n    justify-content: flex-start;\n  }\n\n  .fe-block-6808c7c0c35bcfa247a5dc7f .sqs-block-alignment-wrapper {\n    align-items: flex-start;\n  }\n\n  @media (min-width: 768px) {\n    .fe-block-6808c7c0c35bcfa247a5dc7f {\n      grid-area: 1/2/4/18;\n      z-index: 0;\n\n      \n        \n      \n\n      \n    }\n\n    .fe-block-6808c7c0c35bcfa247a5dc7f .sqs-block {\n      justify-content: flex-start;\n    }\n\n    .fe-block-6808c7c0c35bcfa247a5dc7f .sqs-block-alignment-wrapper {\n      align-items: flex-start;\n    }\n  }\n\n  .fe-block-6808c7c05a92790edb62450b {\n    grid-area: 4/2/20/10;\n    z-index: 1;\n\n    @media (max-width: 767px) {\n      \n        \n      \n      \n    }\n  }\n\n  .fe-block-6808c7c05a92790edb62450b .sqs-block {\n    justify-content: flex-start;\n  }\n\n  .fe-block-6808c7c05a92790edb62450b .sqs-block-alignment-wrapper {\n    align-items: flex-start;\n  }\n\n  @media (min-width: 768px) {\n    .fe-block-6808c7c05a92790edb62450b {\n      grid-area: 6/2/21/16;\n      z-index: 1;\n\n      \n        \n      \n\n      \n    }\n\n    .fe-block-6808c7c05a92790edb62450b .sqs-block {\n      justify-content: flex-start;\n    }\n\n    .fe-block-6808c7c05a92790edb62450b .sqs-block-alignment-wrapper {\n      align-items: flex-start;\n    }\n  }\n\n  .fe-block-6808c7c0bfcf1c51d229fb6c {\n    grid-area: 20/2/28/10;\n    z-index: 2;\n\n    @media (max-width: 767px) {\n      \n        \n      \n      \n    }\n  }\n\n  .fe-block-6808c7c0bfcf1c51d229fb6c .sqs-block {\n    justify-content: flex-start;\n  }\n\n  .fe-block-6808c7c0bfcf1c51d229fb6c .sqs-block-alignment-wrapper {\n    align-items: flex-start;\n  }\n\n  @media (min-width: 768px) {\n    .fe-block-6808c7c0bfcf1c51d229fb6c {\n      grid-area: 1/18/9/26;\n      z-index: 2;\n\n      \n        \n      \n\n      \n    }\n\n    .fe-block-6808c7c0bfcf1c51d229fb6c .sqs-block {\n      justify-content: flex-start;\n    }\n\n    .fe-block-6808c7c0bfcf1c51d229fb6c .sqs-block-alignment-wrapper {\n      align-items: flex-start;\n    }\n  }\n\n  .fe-block-6808c7c07554db0529ba3aea {\n    grid-area: 28/2/40/10;\n    z-index: 3;\n\n    @media (max-width: 767px) {\n      \n        \n      \n      \n    }\n  }\n\n  .fe-block-6808c7c07554db0529ba3aea .sqs-block {\n    justify-content: center;\n  }\n\n  .fe-block-6808c7c07554db0529ba3aea .sqs-block-alignment-wrapper {\n    align-items: center;\n  }\n\n  @media (min-width: 768px) {\n    .fe-block-6808c7c07554db0529ba3aea {\n      grid-area: 9/18/21/26;\n      z-index: 3;\n\n      \n        \n      \n\n      \n    }\n\n    .fe-block-6808c7c07554db0529ba3aea .sqs-block {\n      justify-content: center;\n    }\n\n    .fe-block-6808c7c07554db0529ba3aea .sqs-block-alignment-wrapper {\n      align-items: center;\n    }\n  }\n\n</style><div class=\"fluid-engine fe-6808c7c0f8a81cb25055ae01\"><div class=\"fe-block fe-block-6808c7c0c35bcfa247a5dc7f\"><div class=\"sqs-block website-component-block sqs-block-website-component sqs-block-html html-block\" data-block-css=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/605e3955-81d0-429c-99a0-9b8fca3b167a_541/website.components.html.styles.css&quot;]\" data-block-scripts=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/605e3955-81d0-429c-99a0-9b8fca3b167a_541/website.components.html.visitor.js&quot;]\" data-block-type=\"1337\" data-definition-name=\"website.components.html\" data-sqsp-block=\"text\" data-website-component-id=\"6808c7c0c35bcfa247a5dc7f\" id=\"block-6808c7c0c35bcfa247a5dc7f\"><div class=\"sqs-block-content\"><div class=\"sqs-html-content\" data-sqsp-text-block-content><h1 style=\"white-space:pre-wrap;\">Contact Us</h1></div></div></div></div><div class=\"fe-block fe-block-6808c7c05a92790edb62450b\"><div class=\"sqs-block website-component-block sqs-block-website-component sqs-block-form form-block\" data-block-css=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.form/9eba5bea-9d6f-44b6-8a5b-fb45f2b5b84f_713/website.components.form.styles.css&quot;]\" data-block-scripts=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.form/9eba5bea-9d6f-44b6-8a5b-fb45f2b5b84f_713/website.components.form.visitor.js&quot;]\" data-block-type=\"1337\" data-definition-name=\"website.components.form\" data-sqsp-block=\"form\" data-website-component-id=\"6808c7c05a92790edb62450b\" id=\"block-6808c7c05a92790edb62450b\"><div class=\"sqs-block-content\"></div></div></div><div class=\"fe-block fe-block-6808c7c0bfcf1c51d229fb6c\"><div class=\"sqs-block website-component-block sqs-block-website-component sqs-block-html html-block\" data-block-css=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/605e3955-81d0-429c-99a0-9b8fca3b167a_541/website.components.html.styles.css&quot;]\" data-block-scripts=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/605e3955-81d0-429c-99a0-9b8fca3b167a_541/website.components.html.visitor.js&quot;]\" data-block-type=\"1337\" data-definition-name=\"website.components.html\" data-sqsp-block=\"text\" data-website-component-id=\"6808c7c0bfcf1c51d229fb6c\" id=\"block-6808c7c0bfcf1c51d229fb6c\"><div class=\"sqs-block-content\"><div class=\"sqs-html-content\" data-sqsp-text-block-content><h3 style=\"white-space:pre-wrap;\">Our Office</h3><p class=\"\" style=\"white-space:pre-wrap;\">1st Floor, McCallum House</p><p class=\"\" style=\"white-space:pre-wrap;\">Watermark Business Park</p><p class=\"\" style=\"white-space:pre-wrap;\">375 Govan Road</p><p class=\"\" style=\"white-space:pre-wrap;\">Glasgow</p><p class=\"\" style=\"white-space:pre-wrap;\">G51 2SE</p></div></div></div></div><div class=\"fe-block fe-block-6808c7c07554db0529ba3aea\"><div class=\"sqs-block website-component-block sqs-block-website-component sqs-block-map map-block sized vsize-12\" data-block-css=\"[]\" data-block-scripts=\"[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.map/f1ac0246-dc60-459a-b684-1439ad216b79_927/website.components.map.visitor.js&quot;]\" data-block-type=\"1337\" data-definition-name=\"website.components.map\" data-website-component-id=\"6808c7c07554db0529ba3aea\" id=\"block-6808c7c07554db0529ba3aea\"><div class=\"sqs-block-content\"></div></div></div></div></div>\n    </div>\n  \n  </div>\n  \n</section>\n\n  \n</article>"} />;
+      {/* Main Content */}
+      <div className="max-w-[var(--max-width)] mx-auto px-6 lg:px-8 pb-16">
+        <div className="border-t border-gray-200 mb-10" />
+
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          {/* Contact Form */}
+          <div className="flex-1 max-w-2xl">
+            <form action="#" method="POST" className="space-y-6">
+              <div className="flex flex-col sm:flex-row gap-6">
+                <div className="flex-1">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-semibold text-navy mb-2"
+                  >
+                    First Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm text-[var(--sgs-dark)] bg-white focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div className="flex-1">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-semibold text-navy mb-2"
+                  >
+                    Last Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm text-[var(--sgs-dark)] bg-white focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                    placeholder="Last Name"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-navy mb-2"
+                >
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm text-[var(--sgs-dark)] bg-white focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                  placeholder="Email Address"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-semibold text-navy mb-2"
+                >
+                  Subject <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm text-[var(--sgs-dark)] bg-white focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                  placeholder="Subject"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-navy mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm text-[var(--sgs-dark)] bg-white focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors resize-y"
+                  placeholder="Your message..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="bg-navy text-white px-8 py-3 font-semibold text-sm tracking-wide uppercase hover:bg-[var(--sgs-navy-light)] transition-colors rounded-sm"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+
+          {/* Office Info */}
+          <div className="lg:w-80 xl:w-96 shrink-0">
+            <div className="border-t-2 border-teal pt-6">
+              <h2 className="text-xl md:text-2xl font-bold text-navy mb-4">
+                Our Office
+              </h2>
+              <div className="text-[var(--sgs-gray)] leading-relaxed text-sm">
+                <p className="mb-2">
+                  1st Floor, McCallum House
+                  <br />
+                  Watermark Business Park
+                  <br />
+                  375 Govan Road
+                  <br />
+                  Glasgow
+                  <br />
+                  G51 2SE
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
